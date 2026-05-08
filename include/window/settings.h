@@ -4,6 +4,7 @@
 
 class SettingsWindow : public Window {
 public:
+    int ok_count = 0;
     SettingsWindow();
     ~SettingsWindow() = default;
     void render(SDL_Renderer* renderer) override;
