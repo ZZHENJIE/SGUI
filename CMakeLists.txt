@@ -71,9 +71,7 @@ include_directories("${CMAKE_SOURCE_DIR}/include")
 
 link_directories(${THIRD_PARTY_LIB})
 
-add_executable(${PROJECT_NAME}
-    src/main.cpp
-)
+add_subdirectory(src)
 
 target_link_libraries(${PROJECT_NAME}
     SDL3
