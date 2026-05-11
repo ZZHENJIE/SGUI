@@ -1,0 +1,13 @@
+{
+  "Windows": [
+    {
+      "label": "Tool/Screener",
+      "open": true
+    },
+    {
+      "label": "Tool/Settings",
+      "open": true
+    }
+  ],
+  "Settings": {}
+}

@@ -1,13 +1,21 @@
 #pragma once
 
-struct AppMenuOpen {
-    bool show_demo_window = false;
-    bool show_settings_window = false;
-};
+#include <string>
+#include <unordered_map>
+#include <memory>
+#include "core/window.h"
 
 class Application {
 private:
-    AppMenuOpen app_menu_open;
+    std::unordered_map<std::string, std::unique_ptr<Window>> windows;
+    nlohmann::json config;
+
+    void initWindows();
+public:
+    template<typename T>
+    void addWindow(std::string name, std::unique_ptr<T> window){
+        windows[name] = std::move(window);
+    }
 public:
     Application();
     ~Application();
