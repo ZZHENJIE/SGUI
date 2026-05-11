@@ -30,13 +30,8 @@ if(APPLE)
 
 elseif(WIN32)
     if(MINGW)
-        set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
-        find_package(SDL3 CONFIG REQUIRED)
-        find_package(libcurl CONFIG REQUIRED)
-
         target_link_libraries(${PROJECT_NAME} PRIVATE
-            SDL3::SDL3
-            libcurl::libcurl
+            -lSDL3 -lcurl
         )
     endif()
 endif()

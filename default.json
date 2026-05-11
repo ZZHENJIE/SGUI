@@ -9,5 +9,7 @@
       "open": true
     }
   ],
-  "Settings": {}
+  "Settings": {
+    "test": "Hello World"
+  }
 }
